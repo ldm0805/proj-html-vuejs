@@ -7,7 +7,6 @@ export default {
 }
 </script>
 <template lang="">
-    <div>
         <nav class="nav_cont">
             <ul>
                 <!-- For per la navbar + click sugli elementi per assegnare la classe active -->
@@ -18,13 +17,12 @@ export default {
                 </li>
             </ul>
         </nav>
-    </div>
 </template>
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
-.container {
+.nav_cont {
 
     @include justify_content_between;
     margin-top: 1em;
@@ -33,6 +31,8 @@ export default {
     ul {
         margin: 2rem 1rem;
         @include center;
+        list-style-type: none;
+        color: $white;
 
         .active {
             color: $primary;
