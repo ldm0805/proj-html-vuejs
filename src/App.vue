@@ -14,7 +14,9 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
+  <div>
+    <AppHeader />
+  </div>
 </template>
 
 <style  lang="scss">

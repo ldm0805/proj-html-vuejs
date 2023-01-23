@@ -1,39 +1,24 @@
 <script>
-import AppNav from './AppNav.vue';
 export default {
-    components: {
-        AppNav
-    },
-    data() {
-        return {
-            menuNav: [
-                {
-                    label: 'Home',
-                },
-                {
-                    label: 'Shop',
-                },
-                {
-                    label: 'Blog',
-                },
-                {
-                    label: 'Media',
-                },
-                {
-                    label: 'ShortCode',
-                },
-                {
-                    label: 'Features',
-                },
-            ]
-        }
-    },
+    props: {
+        menuNav: Array
+
+    }
 }
 </script>
 <template lang="">
     <div>
-        <AppNav :menuNav="menuNav"/>
-    </div>  
+        <nav class="nav_cont">
+            <ul>
+                <!-- For per la navbar + click sugli elementi per assegnare la classe active -->
+                <li v-for="(item, index) in menuNav" :key="index">
+                    <a :href="item.url">
+                        {{ item.label }}
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </template>
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
