@@ -20,11 +20,11 @@ export default {
                 {
                     label: 'Extras',
                     details: [
-                        'Bookmark',
-                        'Features',
-                        'SiteMap',
-                        'Lists',
-                        'Conctact Us'
+                        'Delivery',
+                        'Cart',
+                        'Terms conditions',
+                        'My account',
+                        'About us'
                     ]
                 }
             ]
@@ -33,7 +33,7 @@ export default {
 }
 </script>
 <template lang="">
-        <AppFooterInfo :menuNav="menuNav"/> 
+        <AppFooterInfo :menuFooter="menuFooter"/> 
 </template>
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
