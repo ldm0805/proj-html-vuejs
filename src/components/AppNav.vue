@@ -2,7 +2,6 @@
 export default {
     props: {
         menuNav: Array
-
     }
 }
 </script>
