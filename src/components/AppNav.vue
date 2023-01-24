@@ -9,13 +9,15 @@ export default {
         <nav class="nav_cont">
             <ul>
                 <!-- For per la navbar + click sugli elementi per assegnare la classe active -->
-                <li v-for="(item, index) in menuNav" :key="index">
+                <li class="dropdown_" v-for="(item, index) in menuNav" :key="index">
                     <a :href="item.url">
                         {{ item.label }}
-                        <ul class="d-flex flex-column">
-                            <li class="my-2" v-for="(item, index) in item.details" :key="index"><a href="#"><span>{{ item }}</span></a></li>
-                        </ul>
                     </a>
+                    <ul class="d-flex flex-column">
+                        <li class="dropdown-content_" v-for="(item, index) in item.details" :key="index">
+                            <a href="#">{{ item }}</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>
@@ -31,7 +33,6 @@ export default {
     text-align: center;
 
     ul {
-        margin: 2rem 1rem;
         @include center;
         list-style-type: none;
         color: $white;
@@ -51,5 +52,34 @@ export default {
 
         }
     }
+}
+
+.dropdown_ {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content_ {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content_ ul {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content_ a:hover {
+    background-color: #ddd;
+}
+
+.dropdown_:hover .dropdown-content_ {
+    display: block;
 }
 </style>

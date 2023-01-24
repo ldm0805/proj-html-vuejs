@@ -39,7 +39,7 @@ export default {
                     <li class="mx-5" v-for="(item, index) in menuFooter" :key="index">
                         <a :href="item.url"><h5>{{ item.label }}</h5></a>
                         <ul>
-                            <li class="my-2 hover-y" v-for="(item, index) in item.details" :key="index"><a href="#"><span>{{ item }}</span></a></li>
+                            <li class="" v-for="(item, index) in item.details" :key="index"><a href="#"><span>{{ item }}</span></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -97,7 +97,6 @@ export default {
 
     ul {
         list-style-type: none;
-        padding: 0;
 
         li {
             .fa-solid {

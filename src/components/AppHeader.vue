@@ -89,6 +89,14 @@ export default {
     <div class="container_head">
         <img src="public\img\mob-logo.png" alt="">
         <AppNav :menuNav="menuNav"/>
+        <div class="shop">
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a> </li>
+                <li><a href="#"><i class="fa-regular fa-user"></i></a> </li>
+                <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a><span>(0)</span> </li>
+
+            </ul>
+        </div>
     </div>  
 </template>
 <style lang="scss" scoped>
@@ -105,6 +113,7 @@ export default {
     a {
         text-decoration: none;
         color: #a6a6a6;
+        padding: 1em;
     }
 
 
@@ -148,15 +157,37 @@ a:hover {
     background-color: $darkblue;
     @include justify_content_between;
     text-align: center;
-}
+    align-items: center;
 
-.widget-title:after {
-    font-family: 'FontAwesome';
-    font-size: 14px;
-    content: "\F107";
-    font-weight: normal;
-    font-style: normal;
-    padding-left: 5px;
-    color: #a6a6a6;
+    .widget-title:after {
+        font-family: 'FontAwesome';
+        font-size: 14px;
+        content: "\F107";
+        font-weight: normal;
+        font-style: normal;
+        padding-left: 5px;
+        color: #a6a6a6;
+    }
+
+    .shop {
+        display: flex;
+        align-items: center;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            gap: 1em;
+            font-size: 18px;
+            margin: 0;
+
+            li a {
+                color: white;
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+    }
 }
 </style>
