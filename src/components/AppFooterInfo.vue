@@ -6,8 +6,9 @@ export default {
 }
 </script>
 <template lang="">
+    <div class="details-cont">
 
-        <div class="details-cont">
+        <div class="d-flex px-2">
             <!-- Address info -->
             <div class="address">
                 <ul class="gray">
@@ -16,15 +17,17 @@ export default {
                     </li>
                     <li>
                         <div class="d-flex text-white align-items-start">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div>60 29th Street San Francisco, CA 94110 507-Union Trade Center, United States of America</div> 
+                            <div>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span>60 29th Street San Francisco, CA 94110 507-Union Trade Center, United States of America</span> 
                         </div>
                     </li>
                     <li>
                         <i class="fa-solid fa-phone"></i>
                         <span>(+00) 123-456-789</span>
                     </li>
-                    <li>
+                    <li class="hover-y">
                         <i class="fa-solid fa-envelope"></i>
                         <span>demo@example.com</span>
                     </li>
@@ -33,20 +36,20 @@ export default {
             <!-- Information -->
             <div class="col-middle">
                 <ul class="d-flex">
-                    <li class="mx-5" gray v-for="(item, index) in menuFooter" :key="index">
+                    <li class="mx-5" v-for="(item, index) in menuFooter" :key="index">
                         <a :href="item.url"><h5>{{ item.label }}</h5></a>
                         <ul>
-                            <li gray v-for="(item, index) in item.details" :key="index"><a href="#"><span>{{ item }}</span></a></li>
+                            <li class="my-2 hover-y" v-for="(item, index) in item.details" :key="index"><a href="#"><span>{{ item }}</span></a></li>
                         </ul>
-                </li>
-            </ul>
-        </div>
-        <!-- newsletter -->
-        <div>
-            <div>
-                <h5>Our Newsletter</h5>
-                <span>There are many variations of spanassages of form humour or randomised</span>
+                    </li>
+                </ul>
             </div>
+            <!-- newsletter -->
+            <div>
+                <div>
+                    <h5>Our Newsletter</h5>
+                    <span>There are many variations of spanassages of form humour or randomised</span>
+                </div>
                 <div class="tnp tnp-widget toggle-block">
                     <form>
                         <input type="hidden" name="nr" value="widget"><input type="hidden" name="nlang" value=""><div class="tnp-field tnp-field-email"><label for="tnp-1"><span>Email</span></label>
@@ -56,17 +59,26 @@ export default {
                             </div>
                         </form>
                         <div class="social">
-                                <ul class="d-flex">
-                                    <li><i class="fa-brands fa-facebook-f"></i></li>
-                                    <li><i class="fa-brands fa-twitter"></i></li>
-                                    <li><i class="fa-brands fa-google-plus-g"></i></li>
-                                    <li><i class="fa-brands fa-skype"></i></li>
-                                    <li><i class="fa-brands fa-instagram"></i></li>
-                                </ul>
+                            <ul class="d-flex">
+                                <li><i class="fa-brands fa-facebook-f"></i></li>
+                                <li><i class="fa-brands fa-twitter"></i></li>
+                                <li><i class="fa-brands fa-google-plus-g"></i></li>
+                                <li><i class="fa-brands fa-skype"></i></li>
+                                <li><i class="fa-brands fa-instagram"></i></li>
+                            </ul>
                         </div>
+                    </div>
                 </div>
             </div>
+                <div class="copyright d-flex justify-content-between px-2">
+                    <div>
+                        <span>Copyright © 2023 Codezeel</span>
+                    </div>
+                    <div class="text-white">
+                        ciccio
+                    </div>
             </div>
+        </div>
         </template>
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
@@ -74,9 +86,9 @@ export default {
 
 .details-cont {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     background-image: url('./../../public/img/footer-bg.png');
-    padding: 110px 2em;
+    padding: 110px 0em;
 
     h5 {
         font-weight: bold;
@@ -96,8 +108,23 @@ export default {
             i {
                 color: white;
             }
+
+            .hover-y {
+                span {
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
         }
+
     }
+
+    .copyright {
+        border-top: 1px solid #515772;
+        ;
+    }
+
 
     .col-middle {
         padding: 0em 10em;
@@ -139,7 +166,7 @@ a {
     margin-top: 1.2em;
 
     .fa-brands {
-        padding-right: 1em;
+        padding-right: 1em
     }
 
 }

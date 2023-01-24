@@ -12,6 +12,9 @@ export default {
                 <li v-for="(item, index) in menuNav" :key="index">
                     <a :href="item.url">
                         {{ item.label }}
+                        <ul class="d-flex flex-column">
+                            <li class="my-2" v-for="(item, index) in item.details" :key="index"><a href="#"><span>{{ item }}</span></a></li>
+                        </ul>
                     </a>
                 </li>
             </ul>
