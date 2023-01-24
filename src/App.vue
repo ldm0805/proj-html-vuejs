@@ -24,9 +24,9 @@ export default {
 <template>
   <div>
     <AppHeader />
+    <AppJoystick />
     <AppFooter />
     <!-- <AppService /> -->
-    <AppJoystick />
     <!-- <AppJumboSlider /> -->
   </div>
 </template>

@@ -1,17 +1,20 @@
 <template>
-    <carousel :items-to-show="1.5">
-        <slide v-for="(item, index) in slides" :key="index">
-            <img v-bind:src="slides[index].image" />
-        </slide>
+    <div class="background_joy">
+        <carousel :items-to-show="2.1" :wrap-around="true">
+            <slide v-for="(item, index) in slides" :key="index">
+                <img class="carousel__item" v-bind:src="slides[index].image" />
+            </slide>
 
-        <template #addons>
-            <navigation />
-            <pagination />
-        </template>
-    </carousel>
+            <template #addons>
+                <navigation />
+                <pagination />
+            </template>
+        </carousel>
+    </div>
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 // If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
@@ -20,7 +23,7 @@ export default {
     name: 'App',
     components: {
         Carousel,
-
+        Navigation,
 
         Slide,
         Pagination,
@@ -64,3 +67,8 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+</style>
