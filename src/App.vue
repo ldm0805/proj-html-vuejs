@@ -2,12 +2,16 @@
 import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
-// import AppJoystick from './components/AppJoystick.vue';
+// import AppService from './components/AppService.vue'
+// import AppJumboSlider from './components/AppJumboSlider.vue';
+import AppJoystick from './components/AppJoystick.vue';
 export default {
   components: {
     AppHeader,
     AppFooter,
-    // AppJoystick,
+    // AppService,
+    // AppJumboSlider,
+    AppJoystick,
   },
   data() {
     return {
@@ -21,7 +25,9 @@ export default {
   <div>
     <AppHeader />
     <AppFooter />
-    <!-- <AppJoystick /> -->
+    <!-- <AppService /> -->
+    <AppJoystick />
+    <!-- <AppJumboSlider /> -->
   </div>
 </template>
 

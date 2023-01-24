@@ -2,7 +2,7 @@
 export default {
     props: {
         menuNav: Array
-    }
+    },
 }
 </script>
 <template lang="">
@@ -10,14 +10,16 @@ export default {
             <ul>
                 <!-- For per la navbar + click sugli elementi per assegnare la classe active -->
                 <li class="dropdown_" v-for="(item, index) in menuNav" :key="index">
-                    <a :href="item.url">
+                       <a :href="item.url">
                         {{ item.label }}
                     </a>
-                    <ul class="d-flex flex-column">
-                        <li class="dropdown-content_" v-for="(item, index) in item.details" :key="index">
-                            <a href="#">{{ item }}</a>
-                        </li>
-                    </ul>
+                    <li>
+                        <ul class="d-flex flex-column">
+                            <li v-for="(item, index) in item.details" :key="index">
+                                <a class="dropdown-content_" href="#">{{ item }}</a>
+                            </li>
+                        </ul>
+                    </li>
                 </li>
             </ul>
         </nav>
@@ -45,6 +47,7 @@ export default {
 
         li a {
             padding: 1em;
+            margin: 1em 0em;
             font-size: 16px;
             text-decoration: none;
             transition: border 0.3s;
@@ -68,15 +71,19 @@ export default {
     z-index: 1;
 }
 
-.dropdown-content_ ul {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+.dropdown-content_ {
+    ul {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
 
-.dropdown-content_ a:hover {
-    background-color: #ddd;
+        a {
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+    }
 }
 
 .dropdown_:hover .dropdown-content_ {
