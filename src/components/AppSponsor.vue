@@ -1,7 +1,7 @@
 <template>
     <div class="background_joy">
 
-        <carousel :items-to-show="1" :wrap-around="true">
+        <carousel :items-to-show="5" :wrap-around="true">
             <slide v-for="(item, index) in slides" :key="index">
                 <div class="d-flex flex-column g-5">
                     <div class="img-cont">
