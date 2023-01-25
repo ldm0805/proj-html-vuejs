@@ -3,6 +3,7 @@ import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
 import AppSpecialCategory from './components/AppSpecialCategory.vue';
+import AppProfile from './components/AppProfile.vue'
 // import AppService from './components/AppService.vue'
 // import AppJumboSlider from './components/AppJumboSlider.vue';
 import AppJoystick from './components/AppJoystick.vue';
@@ -11,6 +12,7 @@ export default {
     AppHeader,
     AppFooter,
     AppSpecialCategory,
+    AppProfile,
     // AppService,
     // AppJumboSlider,
     AppJoystick,
@@ -27,6 +29,7 @@ export default {
   <div>
     <AppHeader />
     <AppSpecialCategory />
+    <AppProfile />
     <AppJoystick />
     <AppFooter />
     <!-- <AppService /> -->
