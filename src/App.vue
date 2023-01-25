@@ -6,7 +6,7 @@ import AppSpecialCategory from './components/AppSpecialCategory.vue';
 import AppProfile from './components/AppProfile.vue'
 import AppSponsor from './components/AppSponsor.vue';
 import AppGameBlogs from './components/AppGameBlogs.vue'
-// import AppService from './components/AppService.vue'
+import AppService from './components/AppService.vue'
 // import AppJumboSlider from './components/AppJumboSlider.vue';
 import AppJoystick from './components/AppJoystick.vue';
 export default {
@@ -14,10 +14,10 @@ export default {
     AppHeader,
     AppFooter,
     AppSpecialCategory,
+    AppService,
     AppProfile,
     AppSponsor,
     AppGameBlogs,
-    // AppService,
     // AppJumboSlider,
     AppJoystick,
   },
@@ -35,10 +35,10 @@ export default {
     <AppSpecialCategory />
     <AppJoystick />
     <AppProfile />
+    <AppService />
     <AppGameBlogs />
     <AppSponsor />
     <AppFooter />
-    <!-- <AppService /> -->
     <!-- <AppJumboSlider /> -->
   </div>
 </template>
