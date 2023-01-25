@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <carousel :items-to-show="3" :wrap-around="true">
+        <carousel :items-to-show="4" :wrap-around="true">
             <slide v-for="(item, index) in slides" :key="index">
                 <img :src="hovered === index ? item.image : item.hoverImage" @mouseover="hovered = index"
                     @mouseleave="hovered = null" />
@@ -48,56 +48,72 @@ export default {
                 {
                     image: '../../public/img/09-327x327.jpg',
                     hoverImage: '../../public/img/11-327x327.jpg',
+                    star: 8,
 
                 },
                 {
                     image: '../../public/img/10-327x327.jpg',
                     hoverImage: '../../public/img/11-327x327.jpg',
+                    star: 8,
 
                 },
                 {
                     image: '../../public/img/11-327x327.jpg',
                     hoverImage: '../../public/img/12-327x327.jpg',
+                    star: 8,
 
                 },
                 {
                     image: '../../public/img/12-327x327.jpg',
                     hoverImage: '../../public/img/13-327x327.jpg',
+                    star: 8,
 
                 },
                 {
                     image: '../../public/img/13-327x327.jpg',
                     hoverImage: '../../public/img/14-327x327.jpg',
+                    star: 8,
 
                 },
                 {
                     image: '../../public/img/14-327x327.jpg',
                     hoverImage: '../../public/img/15-327x327.jpg',
+                    star: 8,
 
                 },
                 {
                     image: '../../public/img/15-327x327.jpg',
                     hoverImage: '../../public/img/16-327x327.jpg',
+                    star: 8,
 
                 },
                 {
                     image: '../../public/img/16-327x327.jpg',
                     hoverImage: '../../public/img/17-327x327.jpg',
+                    star: 8,
 
                 },
                 {
                     image: '../../public/img/17-327x327.jpg',
                     hoverImage: '../../public/img/18-327x327.jpg',
+                    star: 8,
 
                 },
                 {
                     image: '../../public/img/18-327x327.jpg',
                     hoverImage: '../../public/img/17-327x327.jpg',
+                    star: 8,
 
                 },
             ],
         }
-    }
+    },
+    methods: {
+        calcStars(item) {
+            return Math.round(item.star / 2);
+            console.log(calcStars(item))
+        },
+    },
 }
 </script>
 
