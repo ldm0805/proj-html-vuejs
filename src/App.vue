@@ -4,6 +4,7 @@ import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
 import AppSpecialCategory from './components/AppSpecialCategory.vue';
 import AppProfile from './components/AppProfile.vue'
+import AppSponsor from './components/AppSponsor.vue';
 // import AppService from './components/AppService.vue'
 // import AppJumboSlider from './components/AppJumboSlider.vue';
 import AppJoystick from './components/AppJoystick.vue';
@@ -13,6 +14,7 @@ export default {
     AppFooter,
     AppSpecialCategory,
     AppProfile,
+    AppSponsor,
     // AppService,
     // AppJumboSlider,
     AppJoystick,
@@ -29,8 +31,9 @@ export default {
   <div>
     <AppHeader />
     <AppSpecialCategory />
-    <AppProfile />
     <AppJoystick />
+    <AppProfile />
+    <AppSponsor />
     <AppFooter />
     <!-- <AppService /> -->
     <!-- <AppJumboSlider /> -->

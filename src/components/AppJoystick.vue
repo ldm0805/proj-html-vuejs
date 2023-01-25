@@ -111,7 +111,7 @@ export default {
     methods: {
         calcStars(item) {
             return Math.round(item.star / 2);
-            console.log(calcStars(item))
+            console.log(calcStars())
         },
     },
 }
