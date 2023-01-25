@@ -9,28 +9,28 @@ export default {
             <span class="icon-image">
 
             </span>
-            <h6>Free Delivery</h6>
+            <h5>Free Delivery</h5>
             <span>Free shipping on all order</span>
         </div>
         <div class="service-content">
             <span class="icon-image-1">
 
             </span>
-            <h6>Free Delivery</h6>
+            <h5>Free Delivery</h5>
             <span>Free shipping on all order</span>
         </div>
         <div class="service-content">
             <span class="icon-image-2">
 
             </span>
-            <h6>Free Delivery</h6>
+            <h5>Free Delivery</h5>
             <span>Free shipping on all order</span>
         </div>
         <div class="service-content">
             <span class="icon-image-3">
 
             </span>
-            <h6>Free Delivery</h6>
+            <h5>Free Delivery</h5>
             <span>Free shipping on all order</span>
         </div>
     </div>
@@ -49,9 +49,12 @@ export default {
     flex-direction: column;
     align-items: center;
     margin: 0em 2em;
+    color: white;
 
-    .icon-image {
-        background: rgba(0, 0, 0, 0) url(../../public/img/service-icon.png) no-repeat scroll center -102px;
+    .icon-image,
+    .icon-image-1,
+    .icon-image-2,
+    .icon-image-3 {
         height: 55px;
         position: relative;
         width: 55px;
@@ -60,6 +63,11 @@ export default {
         -moz-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
+    }
+
+    .icon-image {
+        background: rgba(0, 0, 0, 0) url(../../public/img/service-icon.png) no-repeat scroll center -102px;
+
 
         &:hover {
             background-position: center 20px;
@@ -69,14 +77,7 @@ export default {
 
     .icon-image-1 {
         background: rgba(0, 0, 0, 0) url(../../public/img/service-icon.png) no-repeat scroll center -327px;
-        height: 55px;
-        position: relative;
-        width: 55px;
-        float: left;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
+
 
         &:hover {
             background-position: center -215px;
@@ -86,14 +87,6 @@ export default {
 
     .icon-image-2 {
         background: rgba(0, 0, 0, 0) url(../../public/img/service-icon.png) no-repeat scroll center -555px;
-        height: 55px;
-        position: relative;
-        width: 55px;
-        float: left;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
 
         &:hover {
             background-position: center -443px;
@@ -103,21 +96,24 @@ export default {
 
     .icon-image-3 {
         background: rgba(0, 0, 0, 0) url(../../public/img/service-icon.png) no-repeat scroll center -778px;
-        height: 55px;
-        position: relative;
-        width: 55px;
-        float: left;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
+
 
         &:hover {
             background-position: center -670px;
             border-color: $yellow;
         }
     }
+
+    h5 {
+        @include upbold;
+
+        &:hover {
+            color: $yellow;
+            cursor: pointer;
+        }
+    }
 }
+
 
 .service-list {
     .style-1 {
