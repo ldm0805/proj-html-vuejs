@@ -13,6 +13,7 @@
     "bootstrap": "^5.3.0-alpha1",
     "vue": "^3.2.45",
     "vue-slick-carousel": "^1.0.6",
+    "vue-stars": "^2.0.0",
     "vue3-carousel": "^0.2.9"
   },
   "devDependencies": {

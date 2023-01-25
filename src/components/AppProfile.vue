@@ -85,7 +85,6 @@ img {
 .img-cont {
     position: relative;
 
-
     &:after {
         content: "";
         background: #f9aa01 url(../../public/img/quote.png) no-repeat scroll center 8px;
@@ -94,7 +93,7 @@ img {
         border-radius: 100%;
         position: absolute;
         top: 2px;
-        left: 705px;
+        left: 700px;
         display: inline-block;
         margin-left: -14px;
     }

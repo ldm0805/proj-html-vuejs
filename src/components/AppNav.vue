@@ -11,7 +11,7 @@ export default {
                 <li class="dropdown_" v-for="(item, index) in menuNav" :key="index">
                        <span class="title">
                         {{ item.label }}
-                    </span>
+                        </span>
                     <li>
                             <div class="h-100" v-for="(item, index) in item.details" :key="index">
                                 <a class="dropdown-content_" href="#">{{ item }}</a>
@@ -42,6 +42,7 @@ export default {
         }
 
         li a {
+            border: 1px solid $gray;
             color: $gray;
             padding: 1em;
             font-size: 16px;

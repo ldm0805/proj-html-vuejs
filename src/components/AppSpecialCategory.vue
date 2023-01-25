@@ -62,12 +62,22 @@ export default {
     }
 }
 
+img {
+    &:hover {
+        filter: brightness(1.55);
+        transition: all 1s ease-in;
+        ;
+    }
+}
+
 .img-category {
     display: flex;
     justify-content: space-around;
 
+
     .img-block {
         position: relative;
+
 
         .cat_description {
             box-sizing: border-box;
@@ -82,6 +92,10 @@ export default {
             -o-transition: all 500ms ease;
             transition: all 500ms ease;
 
+            &:hover {
+                background: rgb(29 20 39 / 90%);
+            }
+
             a {
                 text-decoration: none;
                 color: $yellow;
@@ -90,7 +104,6 @@ export default {
 
                 &:hover {
                     border: none;
-
                 }
 
                 h5 {

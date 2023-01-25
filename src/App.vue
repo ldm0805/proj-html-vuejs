@@ -30,7 +30,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="d-flex flex-column gap-3">
     <AppHeader />
     <AppSpecialCategory />
     <AppJoystick />

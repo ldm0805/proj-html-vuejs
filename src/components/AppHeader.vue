@@ -155,7 +155,8 @@ a:hover {
 
 .container_head {
     background-color: $darkblue;
-    @include justify_content_between;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
     align-items: center;
 
@@ -179,6 +180,11 @@ a:hover {
             gap: 1em;
             font-size: 18px;
             margin: 0;
+
+            li span {
+                color: $yellow;
+                padding: 0 .5em;
+            }
 
             li a {
                 color: white;

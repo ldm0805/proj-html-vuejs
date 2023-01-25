@@ -52,11 +52,11 @@ export default {
                 </div>
                 <div class="tnp tnp-widget toggle-block">
                     <form>
-                        <input type="hidden" name="nr" value="widget"><input type="hidden" name="nlang" value=""><div class="tnp-field tnp-field-email">
-                            <input class="tnp-email ms-2" type="email" name="ne" id="tnp-1" value="" required=""></div>
-                            <div class="tnp-field tnp-field-button">
+                        <div class="tnp-field tnp-field-email">
+                            <input class="tnp-email p-2" type="email" name="ne" id="tnp-1" value="" required="">
                                 <input class="tnp-submit" type="submit" value="Subscribe">
-                            </div>
+                            
+                        </div>
                         </form>
                         <div class="social">
                             <ul class="d-flex">
@@ -193,11 +193,16 @@ a {
     font-size: 20px;
 }
 
-.tnp .tnp-submit {
+.tnp-field {
     position: relative;
+}
+
+.tnp .tnp-submit {
+    position: absolute;
     height: 45px;
     width: 45px;
     font-size: 0;
+    right: 150px;
     color: #000000;
     background-image: url(../../public/img/newsletter.png);
     background-attachment: scroll;
@@ -209,6 +214,7 @@ a {
     -moz-transition: none;
     -o-transition: none;
     transition: none;
+    border: 0;
 
     &:hover {
         background-position: center -51px;
