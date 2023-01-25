@@ -7,7 +7,6 @@ import AppProfile from './components/AppProfile.vue'
 import AppSponsor from './components/AppSponsor.vue';
 import AppGameBlogs from './components/AppGameBlogs.vue'
 import AppService from './components/AppService.vue'
-// import AppJumboSlider from './components/AppJumboSlider.vue';
 import AppJoystick from './components/AppJoystick.vue';
 export default {
   components: {
@@ -18,7 +17,6 @@ export default {
     AppProfile,
     AppSponsor,
     AppGameBlogs,
-    // AppJumboSlider,
     AppJoystick,
   },
   data() {
@@ -39,7 +37,6 @@ export default {
     <AppGameBlogs />
     <AppSponsor />
     <AppFooter />
-    <!-- <AppJumboSlider /> -->
   </div>
 </template>
 
