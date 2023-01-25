@@ -3,31 +3,44 @@ export default {
 
 }
 </script>
-<template lang="">
+<template>
     <div class="special-title">
         <h3 class="text-white">Special Category</h3>
+        <div class="border_"></div>
     </div>
     <div class="img-category">
         <div class="img-block">
-        <img src="public\img\category-image-01-446x550_t.jpg" alt="superhero_image">
-        <div class="cat_description">
-            <a class="cat_name" href="https://capricathemes.com/wordpress/WCM04/WCM040086/product-category/batman/" title="Batman"><h5> Batman</h5></a>
-            <a class="read-more" href="https://capricathemes.com/wordpress/WCM04/WCM040086/product-category/batman/" title="Batman">Shop Now</a>
-        </div>
-        </div>
-        <div class="img-block">
-        <img src="public\img\category-image-02-446x550_t.jpg" alt="superhero_image">
-        <div class="cat_description">
-            <a class="cat_name" href="https://capricathemes.com/wordpress/WCM04/WCM040086/product-category/batman/" title="Batman"><h5> Bayonetta</h5></a>
-            <a class="read-more" href="https://capricathemes.com/wordpress/WCM04/WCM040086/product-category/batman/" title="Batman">Shop Now</a>
-        </div>
+            <img src="public\img\category-image-01-446x550_t.jpg" alt="superhero_image">
+            <div class="cat_description">
+                <a class="cat_name" href="https://capricathemes.com/wordpress/WCM04/WCM040086/product-category/batman/"
+                    title="Batman">
+                    <h5> Batman</h5>
+                </a>
+                <a class="read-more" href="https://capricathemes.com/wordpress/WCM04/WCM040086/product-category/batman/"
+                    title="Batman">Shop Now</a>
+            </div>
         </div>
         <div class="img-block">
-        <img src="public\img\category-image-03-446x550_t.jpg" alt="superhero_image">
-        <div class="cat_description">
-            <a class="cat_name" href="https://capricathemes.com/wordpress/WCM04/WCM040086/product-category/batman/" title="Batman"><h5> Dark Souls</h5></a>
-            <a class="read-more" href="https://capricathemes.com/wordpress/WCM04/WCM040086/product-category/batman/" title="Batman">Shop Now</a>
+            <img src="public\img\category-image-02-446x550_t.jpg" alt="superhero_image">
+            <div class="cat_description">
+                <a class="cat_name" href="https://capricathemes.com/wordpress/WCM04/WCM040086/product-category/batman/"
+                    title="Batman">
+                    <h5> Bayonetta</h5>
+                </a>
+                <a class="read-more" href="https://capricathemes.com/wordpress/WCM04/WCM040086/product-category/batman/"
+                    title="Batman">Shop Now</a>
+            </div>
         </div>
+        <div class="img-block">
+            <img src="public\img\category-image-03-446x550_t.jpg" alt="superhero_image">
+            <div class="cat_description">
+                <a class="cat_name" href="https://capricathemes.com/wordpress/WCM04/WCM040086/product-category/batman/"
+                    title="Batman">
+                    <h5> Dark Souls</h5>
+                </a>
+                <a class="read-more" href="https://capricathemes.com/wordpress/WCM04/WCM040086/product-category/batman/"
+                    title="Batman">Shop Now</a>
+            </div>
         </div>
     </div>
 </template>
@@ -38,7 +51,15 @@ export default {
 .special-title {
     display: flex;
     justify-content: center;
-    margin: 2em 0em;
+    flex-direction: column;
+    align-items: center;
+    margin: 3em 0em;
+
+    .border_ {
+        margin: 1em;
+        width: 2.5em;
+        border-bottom: 1px solid $yellow;
+    }
 }
 
 .img-category {
