@@ -8,17 +8,14 @@ export default {
 <template lang="">
         <nav class="nav_cont">
             <ul>
-                <!-- For per la navbar + click sugli elementi per assegnare la classe active -->
                 <li class="dropdown_" v-for="(item, index) in menuNav" :key="index">
-                       <a :href="item.url">
+                       <span class="title">
                         {{ item.label }}
-                    </a>
+                    </span>
                     <li>
-                        <ul class="d-flex flex-column">
-                            <li v-for="(item, index) in item.details" :key="index">
+                            <div class="h-100" v-for="(item, index) in item.details" :key="index">
                                 <a class="dropdown-content_" href="#">{{ item }}</a>
-                            </li>
-                        </ul>
+                            </div>
                     </li>
                 </li>
             </ul>
@@ -39,49 +36,53 @@ export default {
         list-style-type: none;
         color: $white;
 
-        .active {
-            color: $primary;
-            border-bottom: 3px solid $primary;
-            padding-bottom: 2em;
+        li {
+            height: 60px;
+
         }
 
         li a {
+            color: $gray;
             padding: 1em;
-            margin: 1em 0em;
             font-size: 16px;
             text-decoration: none;
             transition: border 0.3s;
-            @include upbold;
 
+
+            &:hover {
+                color: $yellow;
+            }
         }
     }
 }
 
+.title {
+    @include upbold;
+
+    &:hover {
+        color: $yellow;
+        cursor: pointer;
+    }
+}
+
+
 .dropdown_ {
     position: relative;
-    display: inline-block;
 }
 
 .dropdown-content_ {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: $darkblue;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 .dropdown-content_ {
-    ul {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-
-        a {
-            &:hover {
-                background-color: #ddd;
-            }
+    a {
+        &:hover {
+            background-color: #ddd;
         }
     }
 }

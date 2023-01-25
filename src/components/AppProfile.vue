@@ -68,6 +68,9 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+span {
+    color: $yellow;
+}
 
 img {
     border-radius: 100%;
