@@ -34,8 +34,6 @@ export default {
     name: 'App',
     components: {
         Carousel,
-
-
         Slide,
         Navigation,
     },

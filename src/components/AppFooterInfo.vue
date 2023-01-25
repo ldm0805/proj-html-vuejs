@@ -39,7 +39,7 @@ export default {
                     <li class="mx-5" v-for="(item, index) in menuFooter" :key="index">
                         <a :href="item.url"><h5>{{ item.label }}</h5></a>
                         <ul>
-                            <li class="" v-for="(item, index) in item.details" :key="index"><a href="#"><span>{{ item }}</span></a></li>
+                            <li v-for="(item, index) in item.details" :key="index"><a href="#"><span>{{ item }}</span></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -52,7 +52,7 @@ export default {
                 </div>
                 <div class="tnp tnp-widget toggle-block">
                     <form>
-                        <input type="hidden" name="nr" value="widget"><input type="hidden" name="nlang" value=""><div class="tnp-field tnp-field-email"><label for="tnp-1"><span>Email</span></label>
+                        <input type="hidden" name="nr" value="widget"><input type="hidden" name="nlang" value=""><div class="tnp-field tnp-field-email">
                             <input class="tnp-email ms-2" type="email" name="ne" id="tnp-1" value="" required=""></div>
                             <div class="tnp-field tnp-field-button">
                                 <input class="tnp-submit" type="submit" value="Subscribe">
@@ -74,9 +74,15 @@ export default {
                     <div>
                         <span>Copyright © 2023 Codezeel</span>
                     </div>
-                    <div class="text-white">
-                        ciccio
-                    </div>
+                    <div class="social">
+                            <ul class="d-flex">
+                                <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                                <li><i class="fa-brands fa-cc-visa"></i></li>
+                                <li><i class="fa-brands fa-cc-amex"></i></li>
+                                <li><i class="fa-brands fa-cc-paypal"></i></li>
+                                <li><i class="fa-brands fa-google-pay"></i></li>
+                            </ul>
+                        </div>
             </div>
         </div>
         </template>
@@ -88,7 +94,7 @@ export default {
     display: flex;
     flex-direction: column;
     background-image: url('./../../public/img/footer-bg.png');
-    padding: 110px 0em;
+    padding: 80px 0em;
 
     h5 {
         font-weight: bold;
@@ -97,6 +103,7 @@ export default {
 
     ul {
         list-style-type: none;
+        padding: 0;
 
         li {
             .fa-solid {
@@ -106,10 +113,54 @@ export default {
 
             i {
                 color: white;
+                font-size: 20px;
+            }
+
+            span {
+                &:hover {
+                    color: $yellow;
+                }
+            }
+
+            .fa-facebook-f {
+                &:hover {
+                    cursor: pointer;
+                    color: $yellow;
+                }
+            }
+
+            .fa-twitter {
+                &:hover {
+                    cursor: pointer;
+                    color: rgb(65, 65, 255);
+                }
+            }
+
+            .fa-skype {
+                &:hover {
+                    cursor: pointer;
+                    color: rgb(65, 65, 255);
+                }
+            }
+
+            .fa-instagram {
+                &:hover {
+                    cursor: pointer;
+                    color: rgb(209, 52, 131);
+                }
+            }
+
+            .fa-google-plus-g {
+                &:hover {
+                    cursor: pointer;
+                    color: red;
+                }
             }
 
             .hover-y {
                 span {
+                    cursor: pointer;
+
                     &:hover {
                         color: $yellow;
                     }
@@ -121,7 +172,6 @@ export default {
 
     .copyright {
         border-top: 1px solid #515772;
-        ;
     }
 
 
@@ -159,6 +209,11 @@ a {
     -moz-transition: none;
     -o-transition: none;
     transition: none;
+
+    &:hover {
+        background-position: center -51px;
+        border-color: $yellow;
+    }
 }
 
 .social {
